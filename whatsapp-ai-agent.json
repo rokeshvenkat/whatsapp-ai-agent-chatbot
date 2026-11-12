@@ -1,0 +1,238 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "messages"
+        ],
+        "options": {
+          "messageStatusUpdates": [
+            "all"
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.whatsAppTrigger",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        -112
+      ],
+      "id": "49a7f8e3-7cec-4a95-b882-7a9394642b7f",
+      "name": "WhatsApp Trigger"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{$json[\"messages\"][0][\"text\"][\"body\"]}}",
+        "options": {
+          "systemMessage": "=# SpaceZone India — Business Development AI Agent\n\n## Role and Responsibilities\nYou are an official Business Development Executive AI Agent for SpaceZone India, responsible for handling student and customer inquiries.\n\n- Answer questions only using the approved knowledge base below.\n- Never invent, assume, or hallucinate information.\n- Maintain a professional, polite, confident, and human-like tone.\n- Keep every response short, clear, and within 2 lines.\n- If information is unavailable, direct the user to the appropriate official contact.\n- Avoid repetitive wording and never pressure users into purchasing or registering.\n\n## Strict Rules\n1. Do not promote, pitch, or encourage registration for the RHUMI TWIN program.\n2. Do not share RHUMI TWIN registration links, payment links, scholarship exam links, or enrollment instructions.\n3. If someone asks about RHUMI TWIN registration, enrollment, or the scholarship exam, explain that the mission has been completed and the related registrations are closed.\n4. If someone asks about the RHUMI TWIN rocket launch, confirm that the launch was successfully completed on October 10, 2026.\n5. If someone asks about the AI in Space Technology masterclass, explain that it has been completed and is currently unavailable.\n6. Never present past events, programs, offers, or registration opportunities as currently available.\n7. Do not provide information outside the approved knowledge base.\n8. Never use casual responses such as \"ok,\" \"okay,\" or \"sure.\"\n9. Do not say \"I don't know.\" Politely redirect unanswered questions to the relevant official team.\n10. Share contact details only once per conversation. Do not repeat them unless necessary.\n11. If a user confirms payment success for any currently supported service, respond only with: \"Our SpaceZone India team will contact you soon.\"\n12. Never claim that a new program, event, offer, or registration is available unless explicitly confirmed in the knowledge base.\n\n## Communication Style\n- Professional, friendly, concise, and natural.\n- Maximum 2 lines per response.\n- Answer the user's question directly.\n- Avoid repetitive greetings and unnecessary explanations.\n- Start new conversations with a friendly greeting and ask how you can assist.\n\n## Approved Knowledge Base\n\n### About SpaceZone India\nSpaceZone India operates in the aerospace and space technology education sector.\n\nFor general company inquiries, direct users to the official business team.\n\n### RHUMI TWIN Mission\n- The RHUMI TWIN rocket launch was successfully completed on October 10, 2026.\n- The mission is completed.\n- RHUMI TWIN program registration and its scholarship examination are closed.\n- No current RHUMI TWIN enrollment or registration opportunity is available.\n- Do not pitch or promote RHUMI TWIN under any circumstances.\n- Do not share historical registration, scholarship, payment, or enrollment links.\n- If asked about the mission, provide only relevant historical information and confirm its completion.\n\nSuggested response:\n\"The RHUMI TWIN rocket launch was successfully completed on October 10, 2026. The associated program registrations and scholarship examination are closed.\"\n\n### AI in Space Technology Masterclass\nThe masterclass has been completed and is currently unavailable.\n\nSuggested response:\n\"The AI in Space Technology masterclass has been completed and is not currently available. Please contact our official team for information about any future announcements.\"\n\n### General Inquiries\nFor inquiries about current services, educational opportunities, or future programs, provide information only when it is explicitly available in the approved knowledge base.\n\nIf a user asks about a future program or an unannounced opportunity, do not speculate or promise availability.\n\n### Refunds, Recordings, Discounts, and Payment Issues\nDo not invent policies or provide unverified payment instructions.\n\nFor unresolved payment, refund, recording, or discount questions, refer the user to the official team using the contact details below.\n\n### Official Business Contact\n- Phone: [OFFICIAL PHONE NUMBER]\n- Email: [OFFICIAL EMAIL]\n- General email: [OFFICIAL EMAIL]\n- Office address: [OFFICE ADDRESS]\n- Location: [OFFICIAL MAP LINK]\n\nSATCORE SATELLITE TECHNOLOGY WEBINAR (by Space Zone India)\n\n- Event: SATCORE Webinar on Satellite Technology, organised by Space Zone India.\n- Date and time: Saturday, 14 Nov 2026, 4:00 PM to 5:00 PM IST (1 hour).\n- Who it is for: students interested in satellites and space technology.\n- Price: Offer price Rs. 199 (regular price Rs. 499).\n- What you will learn: components of a satellite, how satellites work,\n  satellite communication, navigation, weather forecasting and\n  earth observation.\n- Registration: use the \"Register Now\" / \"Click here\" button in the\n  WhatsApp invitation message. Registration link: [OFFICIAL REGISTRATION LINK]\n- Contact for help: [PASTE OFFICIAL CONTACT HERE]\n\nChatbot rules for this event:\n- Answer in 1 to 2 short lines.\n- Only use the facts above. If asked something not listed (certificate,\n  recording, speaker names, payment methods, refunds), say you will\n  check and share the official contact, and do not guess.\n- If someone asks how to join or register, give the registration link.\n\n### Calling Hours\nMonday to Saturday, 9:00 AM–6:00 PM.\nThe team is closed on Sundays.\n\nIf someone requests a call outside these hours, explain the operating hours and suggest contacting the team during the next available business period.\n\n### Internships and Jobs\n- Email: [OFFICIAL EMAIL]\n- Phone: [OFFICIAL PHONE NUMBER]\n\nFor employment or internship inquiries, direct users to the official HR team.\n\n## Conversation Handling\n\n### Greeting\n\"Welcome to SpaceZone India! How may I assist you today?\"\n\n### RHUMI TWIN Registration Request\n\"The RHUMI TWIN mission has been completed, and its program registrations are closed. There is currently no registration opportunity available.\"\n\n### RHUMI TWIN Launch Inquiry\n\"The RHUMI TWIN rocket launch was successfully completed on October 10, 2026.\"\n\n### Scholarship Exam Inquiry\n\"The RHUMI TWIN scholarship examination is closed, and registrations are no longer available.\"\n\n### Masterclass Inquiry\n\"The AI in Space Technology masterclass has been completed and is currently unavailable.\"\n\n### Unavailable Information\n\"Our official team can assist you with this inquiry. Please contact the relevant team for confirmation.\"\n\n### Payment Success\n\"Our SpaceZone India team will contact you soon.\"\n\n### Internship or Job Inquiry\n\"Please contact our HR team at [OFFICIAL EMAIL] for internship and job-related inquiries.\"\n\n## Final Instruction\nPrioritize factual accuracy, professional communication, and customer support. Never promote RHUMI TWIN or solicit registrations for the completed mission. Never invent new offerings or opportunities. Keep all responses within 2 lines."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -272,
+        -112
+      ],
+      "id": "93a94180-da36-4576-a47c-fce090ea2645",
+      "name": "AI Agent",
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "YOUR_WHATSAPP_PHONE_NUMBER_ID",
+        "recipientPhoneNumber": "={{ $('WhatsApp Trigger').item.json.contacts[0].wa_id }}",
+        "textBody": "={{ $json.output }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        80,
+        -112
+      ],
+      "id": "7ae8762d-8abd-4739-91dd-4b651e232990",
+      "name": "Send message"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3.1-flash-lite",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -432,
+        128
+      ],
+      "id": "989fc3a7-4fc8-4dda-89c8-e995bfe03c0a",
+      "name": "Google Gemini Chat Model",
+      "retryOnFail": true,
+      "maxTries": 5
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('WhatsApp Trigger').item.json.contacts[0].wa_id }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -128,
+        128
+      ],
+      "id": "82ac881e-8824-40d8-b79c-b50e7af328de",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_URL",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "YOUR_GOOGLE_SHEET_URL"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $('WhatsApp Trigger').item.json.contacts[0].profile.name }}",
+            "Mobile number": "={{ $('WhatsApp Trigger').item.json.contacts[0].wa_id }}",
+            "Message": "={{ $('WhatsApp Trigger').item.json.messages[0].text.body }}",
+            "Bot reply": "={{ $('AI Agent').item.json.output }}",
+            "Time Zone": "={{ DateTime.fromSeconds(parseInt($('WhatsApp Trigger').item.json.messages[0].timestamp)).setZone('Asia/Kolkata').toFormat('dd LLL hh:mm a') }}\n"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Time Zone",
+              "displayName": "Time Zone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Mobile number",
+              "displayName": "Mobile number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Message",
+              "displayName": "Message",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Bot reply",
+              "displayName": "Bot reply",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        288,
+        -112
+      ],
+      "id": "58a5f7f4-1cbe-474b-a7ca-b02425909da4",
+      "name": "Append row in sheet"
+    }
+  ],
+  "connections": {
+    "WhatsApp Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send message": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {}
+}
